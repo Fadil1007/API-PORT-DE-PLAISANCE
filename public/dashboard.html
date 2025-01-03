@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><img src="images/logo.png" alt="Port Logo" class="logo"> Tableau de Bord</h1>
+    <button id="logout-button">Se déconnecter</button>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Tableau de bord</a></li>
+      <li><a href="catways.html">Liste des catways</a></li>
+      <li><a href="reservations.html">Liste des réservations</a></li>
+      <li><a href="users.html">Liste des utilisateurs</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <p>Bienvenue, <span id="user-name"></span> !</p>
+
+    <!-- Colone -->
+    <div class="columns">
+
+      <!-- Colone 1 -->
+      <div class="column section">
+        <h2>Catways</h2>
+        <form id="catway-form">
+          <input type="number" id="catwayNumber" placeholder="Numéro de catway" required>
+          <select id="type" required>
+            <option value="">Type</option>
+            <option value="long">Long</option>
+            <option value="short">Court</option>
+          </select>
+          <input type="text" id="catwayState" placeholder="État du catway" required>
+          <button type="submit">Ajouter Catway</button>
+        </form>
+        <form id="modify-catway-form">
+          <input type="text" id="modifyCatwayId" placeholder="ID du catway à modifier" required>
+          <input type="text" id="newCatwayState" placeholder="Nouvel état du catway" required>
+          <button type="submit">Modifier Catway</button>
+        </form>
+        <form id="delete-catway-form">
+          <input type="text" id="deleteCatwayId" placeholder="ID du catway à supprimer" required>
+          <button type="submit">Supprimer Catway</button>
+        </form>
+        <form id="view-catway-form" action="catway.html" method="get">
+          <input type="text" id="viewCatwayId" name="id" placeholder="ID du catway" required>
+          <button type="submit">Voir Détails Catway</button>
+        </form>
+      </div>
+      <!-- Colone 1 fermeture -->
+
+      <!-- Colone 2 -->
+      <div class="column section">
+        <h2>Réservations</h2>
+        <form id="reservation-form">
+          <input type="number" id="reservationCatwayNumber" placeholder="Numéro de catway" required>
+          <input type="text" id="reservationClientName" placeholder="Nom du client" required>
+          <input type="text" id="reservationBoatName" placeholder="Nom du bateau" required>
+          <input type="datetime-local" id="reservationCheckIn" placeholder="Date d'arrivée" required>
+          <input type="datetime-local" id="reservationCheckOut" placeholder="Date de départ" required>
+          <button type="submit">Enregistrer Réservation</button>
+        </form>
+        <form id="delete-reservation-form">
+          <input type="text" id="deleteReservationId" placeholder="ID de la réservation à supprimer" required>
+          <button type="submit">Supprimer Réservation</button>
+        </form>
+        <form id="view-reservation-form" action="reservation.html" method="get">
+          <input type="text" id="viewReservationId" name="id" placeholder="ID de la réservation" required>
+          <button type="submit">Voir Détails Réservation</button>
+        </form>
+      </div>
+      <!-- Colone 2 fermeture -->
+
+      <!-- Colone 3 -->
+      <div class="column section">
+        <h2>Utilisateurs</h2>
+        <form id="create-user-form">
+          <input type="text" id="userName" placeholder="Nom" required>
+          <input type="email" id="userEmail" placeholder="Email" required>
+          <input type="password" id="userPassword" placeholder="Mot de passe" required>
+          <button type="submit">Créer Utilisateur</button>
+        </form>
+        <form id="modify-user-form">
+          <input type="text" id="modifyUserId" placeholder="ID de l'utilisateur à modifier" required>
+          <input type="text" id="newUsername" placeholder="Nouveau nom d'utilisateur">
+          <input type="password" id="newPassword" placeholder="Nouveau mot de passe">
+          <button type="submit">Modifier Utilisateur</button>
+        </form>
+        <form id="delete-user-form">
+          <input type="text" id="deleteUserId" placeholder="ID de l'utilisateur à supprimer" required>
+          <button type="submit">Supprimer Utilisateur</button>
+        </form>
+      </div>
+      <!-- Colone 3 fermeture -->
+    </div>
+    <!-- Colone fin -->
+
+  </div>
+  <footer>
+    <p>&copy; 2024 Port de Plaisance Russell</p>
+  </footer>
+  <script src="scripts/dashboard.js"></script>
+  <script src="scripts/logout.js"></script>
+</body>
+</html>
