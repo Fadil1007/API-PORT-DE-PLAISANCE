@@ -13,7 +13,7 @@ const auth = require('./middlewares/auth');
 
 require('dotenv').config();
 
-mongoose.connect(MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB!'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -55,5 +55,5 @@ app.post('/users', async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+  console.log('Server running on mongodb+srv://Raif:Raif1007.@api.nshmt.mongodb.net/');
 });

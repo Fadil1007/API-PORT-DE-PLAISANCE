@@ -58,7 +58,7 @@ Ouvrez votre navigateur et accédez à :
 
     http://localhost:3000
 
-## Coordonnées utilisateurs pournla connection:
+## Coordonnées utilisateurs pour la connection:
     
     "name": "admin"
     "email": "Raif@gmail.com"
