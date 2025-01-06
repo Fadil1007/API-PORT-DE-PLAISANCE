@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://Raif:<cP%E94yru,k*+Wg>@cluster0.rlhpn.mongodb.net/';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://Raif:Raif1007.@api.nshmt.mongodb.net/';
 const cors = require('cors');
 const path = require('path');
 const app = express();
