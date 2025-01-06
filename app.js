@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://Raif:<db_password>@cluster0.rlhpn.mongodb.net/';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://Raif:<cP%E94yru,k*+Wg>@cluster0.rlhpn.mongodb.net/';
 const cors = require('cors');
 const path = require('path');
 const app = express();
@@ -13,10 +13,7 @@ const auth = require('./middlewares/auth');
 
 require('dotenv').config();
 
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(MONGO_URI)
   .then(() => console.log('Connected to MongoDB!'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
